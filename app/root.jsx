@@ -26,8 +26,8 @@ import favicon from '../public/favicon.svg';
 import {Layout} from 'app/components/Layout'
 
 const shopifyConfig = {
-  storefrontToken: 'fa69d4a1acea5b210dcfff76ac4fa6d9',
-  storeDomain: `https://h-b-dtc-hydrogen-dev-store.myshopify.com`,
+  storefrontToken: '00e1aaa5532fad1a976dadee991fa45b',
+  storeDomain: `https://jetskis-biz.myshopify.com`,
   storefrontApiVersion: '2023-04',
   countryIsoCode: 'US',
   languageIsoCode: 'en',
