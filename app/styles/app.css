@@ -1236,9 +1236,6 @@ select {
 .hidden {
   display: none;
 }
-.aspect-\[3\/2\] {
-  aspect-ratio: 3/2;
-}
 .aspect-\[3\/4\] {
   aspect-ratio: 3/4;
 }
