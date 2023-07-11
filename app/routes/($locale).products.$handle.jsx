@@ -124,10 +124,10 @@ export default function ProductHandle() {
 	};
 
   return (
-    <div>
+    <div key={handle}>
 			{/* <script type="application/ld+json">{`${JSON.stringify(schema)}`}</script> */}
-      <div className='relative w-full grid grid-cols-12 mt-[100px]'>
-        <div className='relative h-[calc(100vh-174px)] col-span-6 bg-primary-green/10'>
+      <div className='relative w-full p-4 grid grid-cols-12 mt-[100px]'>
+        <div className='relative h-[calc(100vh-174px)] col-span-6 '>
           <div className=''>
             {product.media?.nodes?.length > 1 && (<ImageSlider images={product.media?.nodes} />)}
           </div>

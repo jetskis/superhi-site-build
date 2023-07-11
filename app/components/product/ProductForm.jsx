@@ -48,8 +48,8 @@ export function ProductForm({
       </button>
     </fetcher.Form>
   : (
-    <div className='w-full border-2'>
-      <button disabled={true} className="w-full border-l-2 border-black opacity-60 transition-colors duration-300 bg-primary-green text-black uppercase h-[60px] theme-add-button text-mono-20  px-6 text-center font-mono">
+    <div className='w-full mt-4'>
+      <button disabled={true} className="w-full border-black opacity-60 transition-colors duration-300 bg-primary-green text-black uppercase h-[60px] theme-add-button text-mono-20  px-6 text-center font-mono">
         Sold out :(
       </button>
     </div>
