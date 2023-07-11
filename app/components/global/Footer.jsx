@@ -100,7 +100,8 @@ const menus = [
     name: 'shop',
     title: 'Shop',
     items: [
-      { name: 'collection', route: '/collections/all', title: 'Collection' },
+      { name: '40l-bag', route: '/products/40l-bag', title: '40L Bag' },
+      { name: '60l-bag', route: '/products/60l-bag', title: '60L Bag' },
 
     ]
   },
