@@ -84,9 +84,12 @@ export function Footer() {
             </div>
           </div>
         </div>
+        <div>
+          <div className='text-[10vw] leading-[100%] my-10 800:mt-20'>Building Modular Commerce</div>
+        </div>
       </footer>
       <div className='bg-black text-primary-green p-5 text-center text-primary-grey'>
-        <span className='block text-body-10 uppercase font-body'>&copy; {date.getFullYear()} Luggage Bois.</span>
+        <span className='block text-body-10 uppercase font-body'>&copy; {date.getFullYear()} Luggo.</span>
       </div>
     </>
   )

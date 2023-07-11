@@ -2,9 +2,6 @@ import { Suspense } from 'react'
 import {Link, useFetcher, Await} from '@remix-run/react';
 import {flattenConnection, Image, Money} from '@shopify/hydrogen-react';
 
-import { shallow } from 'zustand/shallow'
-import useStore from '~/state/useStore'
-
 export function CartSummary({cost}) {
   return (
     <>
@@ -75,7 +72,7 @@ export function CartHeader({cart, open}) {
             }}
           >
             <div className="">
-              <span className='text-mono-42 text-600 relative text-black'>{data?.totalQuantity || 0}</span>
+              <span className='text-mono-48 text-600 relative text-black'>{data?.totalQuantity || 0}</span>
             </div>
           </button>
         )}

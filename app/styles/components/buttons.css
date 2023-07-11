@@ -377,12 +377,18 @@
 }
   .button.big {
     height: 48px;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 1.1px;
 }
   .button.small {
     height: 40px;
+    padding: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     font-size: 14px;
     line-height: 17px;
 }
@@ -390,15 +396,17 @@
     border-radius: 5px;
     --tw-bg-opacity: 1;
     background-color: rgba(26, 26, 26, var(--tw-bg-opacity));
-    padding: 0.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     font-weight: 600;
     text-transform: uppercase;
     --tw-text-opacity: 1;
     color: rgba(203, 255, 0, var(--tw-text-opacity));
 }
-  @media (color-index: 48) {
+  .button span {
+    position: relative;
+    top: 2px;
+}
+
+@media (color-index: 48) {
     .dark\:prose-invert {
         --tw-prose-body: var(--tw-prose-invert-body);
         --tw-prose-headings: var(--tw-prose-invert-headings);
@@ -418,7 +426,8 @@
         --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
 }
-  @media (color: 48842621) {
+
+@media (color: 48842621) {
     .dark\:prose-invert {
         --tw-prose-body: var(--tw-prose-invert-body);
         --tw-prose-headings: var(--tw-prose-invert-headings);
@@ -438,7 +447,8 @@
         --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
     }
 }
-  @media (prefers-color-scheme: dark) {
+
+@media (prefers-color-scheme: dark) {
     .dark\:prose-invert {
         --tw-prose-body: var(--tw-prose-invert-body);
         --tw-prose-headings: var(--tw-prose-invert-headings);

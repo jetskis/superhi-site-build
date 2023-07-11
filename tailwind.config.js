@@ -13,15 +13,15 @@ const generateValues = (max, factor = 1, unit = 'px') =>
 
 const FONT_SIZES = {
   // Sans
-  'mono-82': ['82px', '90px'],
-  'mono-64': ['64px', '64px'],
-  'mono-50': ['50px', '52px'],
-  'mono-52': ['52px', '52px'],
-  'mono-42': ['42px', '46px'],
-  'mono-36': ['36px', '36px'],
+  'mono-200': ['200px', '184x'],
+  'mono-120': ['120px', '136x'],
+  'mono-100': ['100px', '126x'],
+  'mono-64': ['64px', '80px'],
+  'mono-48': ['48px', '64px'],
+  'mono-36': ['36px', '52px'],
   'mono-32': ['32px', '35px'],
   'mono-26': ['26px', '26px'],
-  'mono-24': ['24px', '26px'],
+  'mono-24': ['24px', '36px'],
   'mono-22': ['22px', '26px'],
   'mono-20': ['20px', '20px'],
   'mono-18': ['18px', '22px'],

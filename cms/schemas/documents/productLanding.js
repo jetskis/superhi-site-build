@@ -66,17 +66,6 @@ export default {
 			group: 'main',
 			validation: Rule => Rule.required(),
 		},
-		{
-      name: 'productLink',
-      title: 'Main Reference',
-      description:
-        'This sets the default slug for navigating to the core product, can be overrode below',
-      type: 'reference',
-      // hidden: true,
-      to: [{type: 'productMap'}],
-      group: 'main',
-      validation: Rule => Rule.required(),
-    },
 
 
 		{
@@ -95,48 +84,6 @@ export default {
 				'If this is checked, it instructs the server to build a static copy of the page. Use this for high traffic pages and products.',
 			group: 'main',
 		},
-
-		{
-      name: 'items',
-      title: 'Product Associations',
-      type: 'array',
-			group: 'main',
-      of: [
-        {
-          type: 'reference',
-          name: 'productMap',
-          to: {type: 'productMap'},
-        },
-        {
-          title: 'Divider Block',
-          name: 'dividerBlock',
-          type: 'object',
-          fields: [
-            {
-              name: 'text',
-              title: 'Text',
-              type: 'string',
-            },
-            // {
-            //   name: 'displaySetting',
-            //   title: 'Display Setting',
-            //   description: 'What site does this show up on?',
-            //   type: 'string',
-            //   options: {
-            //     list: [
-            //       {title: 'Both', value: 'both'},
-            //       {title: 'Storefront Only', value: 'storefront'},
-            //       {title: 'Wholesale Only', value: 'wholesale'},
-            //     ],
-            //     layout: 'dropdown',
-            //   },
-            //   initialValue: 'both',
-            // },
-          ],
-        },
-			]
-		},
-
 
 		{
 			name: 'product',

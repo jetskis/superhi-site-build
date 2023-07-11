@@ -58,6 +58,8 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -109,6 +111,14 @@ shop-pay-button {
 
   model-viewer::part(default-progress-bar) {
     display: none;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+  
+  .rtl {
+    direction: rtl;
   }
 
   input[type='search']::-webkit-search-decoration,

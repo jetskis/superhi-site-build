@@ -13,28 +13,26 @@ const annotations = [
 
 // Document types
 import collection from './documents/collection'
-import collaboration from './documents/collaboration'
 import colorTheme from './documents/colorTheme'
 import colorType from './documents/colorType'
 import colorFam from './documents/colorFam'
+import homePage from './documents/home'
 import page from './documents/page'
 import productLanding from './documents/productLanding'
 import product from './documents/product'
-import productMap from './documents/productMap'
 import productVariant from './documents/productVariant'
 import scheduledTheme from './documents/scheduledTheme'
 import theme from './documents/theme'
 
 const documents = [
   collection,
-  collaboration,
   colorTheme,
   colorType,
   colorFam,
+  homePage,
   page,
   productLanding,
   product,
-  productMap,
   productVariant,
   scheduledTheme,
   theme
@@ -48,13 +46,19 @@ import pageLink from './links/pageLink'
 import cta from './modules/cta'
 import ctaList from './modules/ctaList'
 
-const links = [link, collectionLink, pageLink, productLink, cta, ctaList]
+const links = [
+  link, 
+  collectionLink, 
+  pageLink, 
+  productLink, 
+  cta, 
+  ctaList
+]
 
 // Singleton document types
-import home from './singletons/home'
 import settings from './singletons/settings'
 
-const singletons = [home, settings]
+const singletons = [settings]
 
 // Block content
 import body from './blocks/body'

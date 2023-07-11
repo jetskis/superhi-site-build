@@ -1,13 +1,8 @@
 import React from 'react'
-import {EditIcon, EyeOpenIcon} from '@sanity/icons'
 /**
  * Desk structure overrides
  */
 
-import colorThemes from './colorThemeStructure'
-import home from './homeStructure'
-import pages from './pageStructure'
-import products from './productStructure'
 import settings from './settingStructure'
 
 // If you add document types to desk structure manually, you can add them to this function to prevent duplicates in the root pane
@@ -52,20 +47,13 @@ export const structure = (S, context) => {
 					S.document()
 						.documentId(documentId)
 						.schemaType('page')
-						.views([
-							S.view.form().icon(EditIcon),
-							// S.view
-							// 	.component(IframePreview)
-							// 	.options({
-							// 		previewURL: PREVIEW_URL,
-							// 		token: PREVIEW_TOKEN,
-							// 	})
-							// 	.title('Draft Preview')
-							// 	.icon(EyeOpenIcon),
-						]),
 				),
 		);
-	
+	const colorThemeMenuItem = S.listItem()
+		.title('Color themes')
+		.schemaType('colorTheme')
+		.child(S.documentTypeList('colorTheme'))
+
 	const supportPageMenuItem = S.listItem()
 		.title('Home Pages')
 		.schemaType('home')
@@ -76,17 +64,6 @@ export const structure = (S, context) => {
 					S.document()
 						.documentId(documentId)
 						.schemaType('information')
-						.views([
-							S.view.form().icon(EditIcon),
-							// S.view
-							// 	.component(IframePreview)
-							// 	.options({
-							// 		previewURL: PREVIEW_URL,
-							// 		token: PREVIEW_TOKEN,
-							// 	})
-							// 	.title('Draft Preview')
-							// 	.icon(EyeOpenIcon),
-						]),
 				),
 		);
 
@@ -99,10 +76,6 @@ export const structure = (S, context) => {
 				.items([
 					pageMenuItem,
 					supportPageMenuItem,
-					// S.documentListItem()
-					// 	.id('notFound')
-					// 	.title('404 Page')
-					// 	.schemaType('notFound'),
 				]),
 		);
 	
@@ -241,17 +214,6 @@ export const structure = (S, context) => {
 					S.document()
 						.documentId(documentId)
 						.schemaType('productLanding')
-						.views([
-							S.view.form().icon(EditIcon),
-							// S.view
-							// 	.component(IframePreview)
-							// 	.options({
-							// 		previewURL: PREVIEW_URL,
-							// 		token: PREVIEW_TOKEN,
-							// 	})
-							// 	.title('Draft Preview')
-							// 	.icon(EyeOpenIcon),
-						]),
 				),
 		);
 	
@@ -299,11 +261,6 @@ export const structure = (S, context) => {
 				.params({type: 'product'}),
 		);
 
-	// const productTags = S.listItem()
-	// 	.title('Product Tags')
-	// 	.schemaType('productTag')
-	// 	.child(S.documentTypeList('productTag').title('Product Tags'));
-
 	const productMenuItem = S.listItem()
 		.title('Products')
 		.icon()
@@ -319,7 +276,6 @@ export const structure = (S, context) => {
 					S.divider(),
 					colorTypeMenuItems,
 					colorFamilyMenuItems,
-					// productTags,
 				]),
 		);
 
@@ -330,9 +286,8 @@ export const structure = (S, context) => {
       S.divider(),
       collections,
 			productMenuItem,
-      // products(S, context),
       S.divider(),
-      colorThemes(S, context),
+			colorThemeMenuItem,
       S.divider(),
 			modules,
 			S.divider(),

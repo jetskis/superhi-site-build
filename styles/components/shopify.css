@@ -5,11 +5,11 @@
 
 .shopify-text {
   h2 {
-    @apply text-mono-50 font-mono my-4 800:mt-10
+    @apply text-mono-48 font-mono my-4 800:mt-10
 
   }
   h3 {
-    @apply text-mono-42 font-mono
+    @apply text-mono-36 font-mono
   }
   img {
     @apply my-8 w-full

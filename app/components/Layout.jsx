@@ -24,7 +24,6 @@ export function Layout({children, title}) {
     shallow,
   )
 
-
   // Grab all the fetchers that are adding to cart
   const addToCartFetchers = [];
   for (const fetcher of fetchers) {
