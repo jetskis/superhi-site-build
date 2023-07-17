@@ -10,16 +10,6 @@ export default {
 	type: 'array',
 	of: [
 		{ type: 'module.image' },
-		{ type: 'module.faqs' },
-		{ type: 'module.dynamicCrossShop' },
-		{ type: 'module.collaborations' },
 		{ type: 'module.standardText' },
-		{ type: 'module.simpleHero' },
-		{ type: 'module.infoCarousel' },
-		{ type: 'module.reviewHighlights' },
-		{ type: 'module.heroCarousel' },
-		{ type: 'module.valueProps' },
-    { type: 'module.marquee' },
-    { type: 'module.columns' }
 	],
 };

@@ -1,11 +1,8 @@
 import {HomeIcon} from '@sanity/icons'
 import {defineField} from 'sanity'
 
-const TITLE = 'Home'
-
 export default defineField({
   name: 'home',
-  title: TITLE,
   type: 'document',
   icon: HomeIcon,
   groups: [
@@ -20,11 +17,13 @@ export default defineField({
     },
   ],
   fields: [
-    // Hero
+    // Title
     defineField({
-      name: 'hero',
-      title: 'Hero',
-      type: 'hero.home',
+      name: 'title',
+      title: 'Title',
+      description: 'Internal Use Only',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
       group: 'editorial',
     }),
     // Modules
@@ -35,9 +34,7 @@ export default defineField({
       of: [
         {type: 'module.callout'},
         {type: 'module.callToAction'},
-        {type: 'module.collection'},
         {type: 'module.image'},
-        {type: 'module.instagram'},
         {type: 'module.product'},
       ],
       group: 'editorial',
@@ -46,16 +43,19 @@ export default defineField({
     defineField({
       name: 'seo',
       title: 'SEO',
-      type: 'seo.home',
+      type: 'seo',
       group: 'seo',
     }),
   ],
   preview: {
-    prepare() {
+    select: {
+      title: 'title',
+    },
+    prepare({ title}) {
       return {
         // media: icon,
         subtitle: 'Index',
-        title: TITLE,
+        title
       }
     },
   },

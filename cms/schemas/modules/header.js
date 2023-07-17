@@ -94,7 +94,7 @@ export default {
 						select: {
 							title: 'cta.0.title',
 							collectionTitle: 'cta.0.collection.title',
-							productTitle: 'cta.0.productLanding.title',
+							productTitle: 'cta.0.product.title',
 							pageTitle: 'cta.0.page.title',
 						},
 						prepare: ({

@@ -3,7 +3,7 @@ import * as remixBuild from '@remix-run/dev/server-build';
 import {createStorefrontClient, storefrontRedirect} from '@shopify/hydrogen';
 import {
   createRequestHandler,
-  getBuyerIp,
+  getStorefrontHeaders,
   createCookieSessionStorage,
 } from '@shopify/remix-oxygen';
 
@@ -35,25 +35,24 @@ export default {
       const {storefront} = createStorefrontClient({
         cache,
         waitUntil,
-        buyerIp: getBuyerIp(request),
+        storefrontHeaders: getStorefrontHeaders(request),
+        // buyerIp: getBuyerIp(request),
         i18n: {language: 'EN', country: 'US'},
         publicStorefrontToken: env.PUBLIC_STOREFRONT_API_TOKEN,
         privateStorefrontToken: env.PRIVATE_STOREFRONT_API_TOKEN,
         storeDomain: `https://${env.PUBLIC_STORE_DOMAIN}`,
         storefrontApiVersion: env.PUBLIC_STOREFRONT_API_VERSION || '2023-04',
         storefrontId: env.PUBLIC_STOREFRONT_ID,
-        requestGroupId: request.headers.get('request-id'),
+        // requestGroupId: request.headers.get('request-id'),
       });
 
-      // const uri = `mongodb+srv://shoreline:${env.SHORELINE_PASSWORD}@serverlessinstance0.khyag.mongodb.net/?retryWrites=true&w=majority`
-      // const mongoClient = await mongoose.connect('ongodb+srv://root:TwolmAv7JQCHozKq@cluster0.62kqn.mongodb.net/Development?retryWrites=true&w=majority')
-
-      const sanity = createClient({
-        apiVersion: 'v2022-05-01',
-        dataset: 'production',
-        projectId: '1349bpgd',
-        useCdn: true,
-      })
+      // Add Sanity after you initialize it
+      // const sanity = createClient({
+      //   apiVersion: 'v2022-05-01',
+      //   dataset: 'production',
+      //   projectId: '',
+      //   useCdn: true,
+      // })
 
 
       /**
@@ -63,7 +62,12 @@ export default {
       const handleRequest = createRequestHandler({
         build: remixBuild,
         mode: process.env.NODE_ENV,
-        getLoadContext: () => ({session, sanity, storefront, env}),
+        getLoadContext: () => ({
+          session, 
+          // sanity, // We'll be adding Sanity Shortly
+          storefront, 
+          env
+        }),
       });
 
       const response = await handleRequest(request);

@@ -15,21 +15,14 @@ const hiddenDocTypes = (listItem) => {
 
   return ![
     'collection',
-    'colorTheme',
     'home',
     'media.tag',
-		'productLanding',
     'page',
-		'faq',
     'product',
     'productVariant',
 		'header',
-		'theme',
-		'collaboration',
 		'colorType',
-		'colorFam',
-		'productMap',
-		'scheduledTheme',
+		'theme',
 		'footer',
 		'cart',
     'settings',
@@ -49,10 +42,6 @@ export const structure = (S, context) => {
 						.schemaType('page')
 				),
 		);
-	const colorThemeMenuItem = S.listItem()
-		.title('Color themes')
-		.schemaType('colorTheme')
-		.child(S.documentTypeList('colorTheme'))
 
 	const supportPageMenuItem = S.listItem()
 		.title('Home Pages')
@@ -80,11 +69,11 @@ export const structure = (S, context) => {
 		);
 	
 	const modules = S.listItem()
-		.title('Modules')
+		.title('Site')
 		.icon()
 		.child(
 			S.list()
-				.title('Modules')
+				.title('Site')
 				.items([
 					S.listItem()
 						.title('Headers')
@@ -99,9 +88,9 @@ export const structure = (S, context) => {
 						.schemaType('cart')
 						.child(S.documentTypeList('cart').title('Carts')),
 					S.listItem()
-						.title('FAQs')
-						.schemaType('faq')
-						.child(S.documentTypeList('faq').title('FAQs')),
+						.title('Theme')
+						.schemaType('theme')
+						.child(S.documentTypeList('theme').title('Themes'))
 				]),
 		);
 	
@@ -116,29 +105,9 @@ export const structure = (S, context) => {
 						.title('Collections')
 						.schemaType('collection')
 						.child(S.documentTypeList('collection').title('Collections')),
-					S.listItem()
-						.title('Collaborations')
-						.schemaType('collaboration')
-						.child(S.documentTypeList('collaboration').title('Collaborations')),
 				]),
 		);
 
-	const themes = S.listItem()
-		.title('Themes')
-		.child(
-			S.list()
-				.title('Themes')
-				.items([
-					S.listItem()
-						.title('Themes')
-						.schemaType('theme')
-						.child(S.documentTypeList('theme').title('Themes')),
-					S.listItem()
-						.title('Scheduled Themes')
-						.schemaType('scheduledTheme')
-						.child(S.documentTypeList('scheduledTheme').title('Scheduled Themes')),
-				]),
-		);
 
 	//
 	// === Products ===
@@ -204,40 +173,6 @@ export const structure = (S, context) => {
 				]),
 		);
 
-	const productLandings = S.listItem()
-		.title('Product Landings')
-		.schemaType('productLanding')
-		.child(
-			S.documentTypeList('productLanding')
-				.title('Product Landings')
-				.child(documentId =>
-					S.document()
-						.documentId(documentId)
-						.schemaType('productLanding')
-				),
-		);
-	
-		const productMapsMenuItem = S.listItem()
-		.title('Product Maps')
-		.icon()
-		.child(
-			S.documentList()
-				.title('Product Maps')
-				.menuItems(S.documentTypeList('productMap').getMenuItems())
-				.filter('_type == $type')
-				.params({type: 'productMap'}),
-		);
-	
-	const colorFamilyMenuItems = S.listItem()
-		.title('Color Families')
-		.icon()
-		.child(
-			S.documentList()
-				.title('Color Families')
-				.menuItems(S.documentTypeList('colorFam').getMenuItems())
-				.filter('_type == $type')
-				.params({type: 'colorFam'}),
-		);
 
 	const colorTypeMenuItems = S.listItem()
 		.title('Colors')
@@ -268,14 +203,11 @@ export const structure = (S, context) => {
 			S.list()
 				.title('Products')
 				.items([
-					productLandings,
-					productMapsMenuItem,
 					S.divider(),
 					productsMenuItem,
 					variantsMenuItem,
 					S.divider(),
 					colorTypeMenuItems,
-					colorFamilyMenuItems,
 				]),
 		);
 
@@ -287,11 +219,7 @@ export const structure = (S, context) => {
       collections,
 			productMenuItem,
       S.divider(),
-			colorThemeMenuItem,
-      S.divider(),
 			modules,
-			S.divider(),
-			themes,
       settings(S, context),
       S.divider(),
       ...S.documentTypeListItems().filter(hiddenDocTypes),

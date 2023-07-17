@@ -10,10 +10,10 @@ export default {
 	type: 'object',
 	fields: [
 		{
-			name: 'productLanding',
+			name: 'product',
 			title: 'Product Landing',
 			type: 'reference',
-			to: [{type: 'productLanding'}],
+			to: [{type: 'product'}],
 			validation: Rule => Rule.required(),
 		},
 		{
@@ -33,7 +33,7 @@ export default {
 	preview: {
 		select: {
 			title: 'title',
-			productTitle: 'productLanding.title',
+			productTitle: 'product.title',
 		},
 		prepare: ({title, productTitle}) => ({
 			title: title || productTitle,

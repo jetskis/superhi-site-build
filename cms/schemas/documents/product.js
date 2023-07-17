@@ -56,20 +56,6 @@ export default defineType({
       type: 'proxyString',
       options: {field: 'store.slug.current'},
     }),
-    // Color theme
-    // defineField({
-    //   name: 'colorTheme',
-    //   title: 'Color theme',
-    //   type: 'reference',
-    //   to: [{type: 'colorTheme'}],
-    //   group: 'editorial',
-    // }),
-    // defineField({
-    //   name: 'body',
-    //   title: 'Body',
-    //   type: 'body',
-    //   group: 'editorial',
-    // }),
     defineField({
       name: 'store',
       title: 'Shopify',
@@ -80,7 +66,7 @@ export default defineType({
     defineField({
       name: 'seo',
       title: 'SEO',
-      type: 'seo.shopify',
+      type: 'seo',
       group: 'seo',
     }),
   ],

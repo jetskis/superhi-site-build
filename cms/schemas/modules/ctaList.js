@@ -18,7 +18,7 @@ export default {
 		select: {
 			title: '0.title',
 			collectionTitle: '0.collection.title',
-			productTitle: '0.productLanding.title',
+			productTitle: '0.product.title',
 			pageTitle: '0.page.title',
 		},
 		prepare: ({title, pageTitle, productTitle, collectionTitle}) => ({

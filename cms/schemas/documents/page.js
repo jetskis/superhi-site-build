@@ -40,33 +40,7 @@ export default defineField({
       // @ts-ignore - TODO - fix this TS error
       validation: validateSlug,
     }),
-    // Color theme
-    defineField({
-      name: 'colorTheme',
-      title: 'Color theme',
-      type: 'reference',
-      to: [{type: 'colorTheme'}],
-      group: 'theme',
-      hidden: true,
-    }),
-    // Show hero
-    defineField({
-      name: 'showHero',
-      title: 'Show hero',
-      type: 'boolean',
-      hidden: true,
-      description: 'If disabled, page title will be displayed instead',
-      initialValue: false,
-      group: 'editorial',
-    }),
-    // Hero
-    defineField({
-      name: 'hero',
-      title: 'Hero',
-      type: 'hero.page',
-      hidden: ({document}) => !document?.showHero,
-      group: 'editorial',
-    }),
+    // Page Component List
     defineField({
       name: 'pageComponentList',
       title: 'Modules',
@@ -85,7 +59,7 @@ export default defineField({
     defineField({
       name: 'seo',
       title: 'SEO',
-      type: 'seo.page',
+      type: 'seo',
       group: 'seo',
     }),
   ],

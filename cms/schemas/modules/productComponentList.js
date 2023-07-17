@@ -9,11 +9,6 @@ export default {
 	icon: Icon,
 	type: 'array',
 	of: [
-		{ type: 'module.faqs' },
-		{ type: 'module.dynamicCrossShop' },
-		{ type: 'module.collaboration' },
-		{ type: 'module.image' },
-		{ type: 'module.marquee' },
-		{ type: 'module.reviews' }
+		{ type: 'module.image' }
 	],
 };

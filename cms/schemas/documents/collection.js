@@ -61,14 +61,6 @@ export default defineType({
       type: 'proxyString',
       options: {field: 'store.slug.current'},
     }),
-    // Color theme
-    defineField({
-      name: 'colorTheme',
-      title: 'Color theme',
-      type: 'reference',
-      to: [{type: 'colorTheme'}],
-      group: 'theme',
-    }),
     // Vector
     defineField({
       name: 'vector',
@@ -93,22 +85,6 @@ export default defineType({
           return true
         }),
     }),
-    // Show hero
-    defineField({
-      name: 'showHero',
-      title: 'Show hero',
-      type: 'boolean',
-      description: 'If disabled, page title will be displayed instead',
-      group: 'editorial',
-    }),
-    // // Hero
-    defineField({
-      name: 'hero',
-      title: 'Hero',
-      type: 'hero.collection',
-      hidden: ({document}) => !document?.showHero,
-      group: 'editorial',
-    }),
     // // Modules
     defineField({
       name: 'modules',
@@ -119,7 +95,6 @@ export default defineType({
         {type: 'module.callout'},
         {type: 'module.callToAction'},
         {type: 'module.image'},
-        {type: 'module.instagram'},
       ],
       group: 'editorial',
     }),
@@ -135,7 +110,7 @@ export default defineType({
     defineField({
       name: 'seo',
       title: 'SEO',
-      type: 'seo.shopify',
+      type: 'seo',
       group: 'seo',
     }),
   ],

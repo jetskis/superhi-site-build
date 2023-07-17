@@ -1,11 +1,8 @@
 import pluralize from 'pluralize-esm'
 import React from 'react'
 import {defineField} from 'sanity'
-interface ColorOption {
-  title: string
-}
 
-const ColorPreview = ({color}: {color: string}) => {
+const ColorPreview = ({color}) => {
   return (
     <div
       style={{
@@ -76,7 +73,7 @@ export default defineField({
         },
       ],
       validation: (Rule) =>
-        Rule.custom((options: ColorOption[] | undefined) => {
+        Rule.custom((options) => {
           // Each size must have a unique title
           if (options) {
             const uniqueTitles = new Set(options.map((option) => option?.title))

@@ -36,20 +36,8 @@ export default defineField({
       type: 'module.callout',
     },
     {
-      name: 'blockGrid',
-      type: 'module.grid',
-    },
-    {
       name: 'blockImages',
       type: 'module.images',
-    },
-    {
-      name: 'blockInstagram',
-      type: 'module.instagram',
-    },
-    {
-      name: 'blockProducts',
-      type: 'module.products',
     },
   ],
 })
