@@ -37,7 +37,7 @@ export default defineField({
       type: 'array',
       of: [
         {
-          name: 'color',
+          name: 'customColor',
           title: 'Color',
           type: 'object',
           fields: [

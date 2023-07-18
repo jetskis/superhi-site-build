@@ -4,6 +4,7 @@ import {defineField} from 'sanity'
 export default defineField({
   name: 'home',
   type: 'document',
+  title: 'Home',
   icon: HomeIcon,
   groups: [
     {
