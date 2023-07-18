@@ -1,5 +1,4 @@
 import pluralize from 'pluralize-esm'
-import React from 'react'
 import {defineField} from 'sanity'
 
 const ColorPreview = ({color}) => {

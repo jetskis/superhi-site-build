@@ -2,6 +2,7 @@ import React from 'react'
 /**
  * Desk structure overrides
  */
+import {DocumentIcon, DocumentsIcon, ThLargeIcon, ComponentIcon, TrolleyIcon} from '@sanity/icons'
 
 import settings from './settingStructure'
 
@@ -33,6 +34,7 @@ export const structure = (S, context) => {
   const pageMenuItem = S.listItem()
 		.title('Pages')
 		.schemaType('page')
+		.icon(DocumentIcon)
 		.child(
 			S.documentTypeList('page')
 				.title('Pages')
@@ -58,7 +60,7 @@ export const structure = (S, context) => {
 
 	const allPageMenuItem = S.listItem()
 		.title('Pages')
-		.icon()
+		.icon(DocumentsIcon)
 		.child(
 			S.list()
 				.title('Pages')
@@ -70,7 +72,7 @@ export const structure = (S, context) => {
 	
 	const modules = S.listItem()
 		.title('Site')
-		.icon()
+		.icon(ComponentIcon)
 		.child(
 			S.list()
 				.title('Site')
@@ -96,7 +98,7 @@ export const structure = (S, context) => {
 	
 	const collections = S.listItem()
 		.title('Collections')
-		.icon()
+		.icon(ThLargeIcon)
 		.child(
 			S.list()
 				.title('Collections')
@@ -198,7 +200,7 @@ export const structure = (S, context) => {
 
 	const productMenuItem = S.listItem()
 		.title('Products')
-		.icon()
+		.icon(TrolleyIcon)
 		.child(
 			S.list()
 				.title('Products')
