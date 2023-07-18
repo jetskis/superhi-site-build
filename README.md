@@ -35,6 +35,25 @@ yarn or npm install
 
 This is tricker given the way the Sanity CLI is configured, the easiest method is to generate a new Sanity instance which you can do following this [guide](https://www.sanity.io/docs/installation) and I will explain in a lesson to make it easier.
 
+Once you have the SANITY-CLI installed you can simply navigate to the `cms` directory and run `sanity init --env .env.local` in the terminal.
+
+You will be asked a series of questions, create a new project, name the project and assign it to your personal sanity or your personal sanity or, from there you can follow the prompts as follows:
+
+```bash
+? Use the default dataset configuration? Yes
+✔ Creating dataset
+? Would you like to add configuration files for a Sanity project in this Next.js folder? Yes
+? Do you want to use TypeScript? No
+? Would you like an embedded Sanity Studio? No
+? File /sanity.cli.js already exists. Do you want to overwrite it? Yes
+? Select project template to use Clean project with no predefined schemas
+? File /sanity/schema.js already exists. Do you want to overwrite it? No
+? File /sanity/env.js already exists. Do you want to overwrite it? Yes
+? File /sanity/lib/client.js already exists. Do you want to overwrite it? No
+? File /sanity/lib/image.js already exists. Do you want to overwrite it? No
+? Would you like to add the project ID and dataset to your .env.local file? Yes
+```
+
 Once you init a new sanity instance, you can simply take the generate sanity ID and place it in a duplicated `.sample.env` file that you should save as `.env` and not commit to your repo! We will be deploying the cms to vercel and putting our environment variable there as well so the sanity instance is hosted.
 
 
