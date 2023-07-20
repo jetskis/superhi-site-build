@@ -45,14 +45,16 @@ You will be asked a series of questions, create a new project, name the project 
 ? Would you like to add configuration files for a Sanity project in this Next.js folder? Yes
 ? Do you want to use TypeScript? No
 ? Would you like an embedded Sanity Studio? No
-? File /sanity.cli.js already exists. Do you want to overwrite it? Yes
+? File /sanity.cli.js already exists. Do you want to overwrite it? No
 ? Select project template to use Clean project with no predefined schemas
 ? File /sanity/schema.js already exists. Do you want to overwrite it? No
-? File /sanity/env.js already exists. Do you want to overwrite it? Yes
+? File /sanity/env.js already exists. Do you want to overwrite it? No
 ? File /sanity/lib/client.js already exists. Do you want to overwrite it? No
 ? File /sanity/lib/image.js already exists. Do you want to overwrite it? No
 ? Would you like to add the project ID and dataset to your .env.local file? Yes
 ```
+
+^^ Mostly override/create the `env.local`` is all you need to do 
 
 Once you init a new sanity instance, you can simply take the generate sanity ID and place it in a duplicated `.sample.env` file that you should save as `.env` and not commit to your repo! We will be deploying the cms to vercel and putting our environment variable there as well so the sanity instance is hosted.
 
