@@ -45,7 +45,7 @@ export const structure = (S, context) => {
 				),
 		);
 
-	const supportPageMenuItem = S.listItem()
+	const homePageMenuItem = S.listItem()
 		.title('Home Pages')
 		.schemaType('home')
 		.child(
@@ -66,7 +66,7 @@ export const structure = (S, context) => {
 				.title('Pages')
 				.items([
 					pageMenuItem,
-					supportPageMenuItem,
+					homePageMenuItem,
 				]),
 		);
 	
