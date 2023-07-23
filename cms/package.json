@@ -7,6 +7,7 @@
   "scripts": {
     "start": "next dev",
     "clean": "rm -rf .next",
+    "next:build": "next build",
     "build": "yarn next:build",
     "deploy": "sanity deploy",
     "deploy-graphql": "sanity graphql deploy"
