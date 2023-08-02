@@ -87,17 +87,17 @@ export async function loader({context}) {
 export default function App() {
   const data = useLoaderData();
   const location = useLocation()
-  // const pageAnalytics = useAnalyticsFromLoaders();
-  // const analyticsFromActions = useAnalyticsFromActions()
+  const pageAnalytics = useAnalyticsFromLoaders();
+  const analyticsFromActions = useAnalyticsFromActions()
 
-  // if (analyticsFromActions) {
-  //   console.log(analyticsFromActions)
-  // }
+  if (analyticsFromActions) {
+    console.log(analyticsFromActions)
+  }
   
-  // useEffect(() => {
-  //   // handles location changing
-  //   console.log(pageAnalytics)
-  // }, [location])
+  useEffect(() => {
+    // handles location changing
+    console.log(pageAnalytics)
+  }, [location])
 
   const {name} = data.layout.shop;
 
