@@ -13,7 +13,6 @@ const annotations = [
 
 // Document types
 import collection from './documents/collection'
-
 import colorType from './documents/colorType'
 import homePage from './documents/home'
 import page from './documents/page'
