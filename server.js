@@ -7,7 +7,6 @@ import {
   createCookieSessionStorage,
 } from '@shopify/remix-oxygen';
 
-// import * as mongoose from 'mongoose'
 import {createClient} from '@sanity/client';
 
 /**
