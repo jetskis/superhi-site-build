@@ -21,14 +21,14 @@ export default {
 			validation: Rule => Rule.required(),
 		},
 		{
-			name: 'mobileMenu',
-			title: 'Mobile Menu',
+			name: 'menu',
+			title: 'Menu',
 			type: 'ctaList',
 			validation: Rule => Rule.required(),
 		},
 		{
 			name: 'desktopMenu',
-			title: 'Desktop Menu',
+			title: 'Desktop Menu (Optional More Advanced)',
 			type: 'array',
 			of: [
 				{
@@ -113,7 +113,6 @@ export default {
 					},
 				},
 			],
-			validation: Rule => Rule.required(),
 		},
 	],
 	preview: {
